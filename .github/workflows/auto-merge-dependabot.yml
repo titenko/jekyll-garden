@@ -4,21 +4,22 @@ on:
   schedule:
     - cron: '0 6 * * *' 
   workflow_dispatch:     
+  pull_request:
+    types: [opened, labeled]
 
 permissions:
-  pull-requests: write
   contents: write
+  pull-requests: write
 
 jobs:
-  auto-merge:
+  enable-auto-merge:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    if: github.actor == 'dependabot[bot]'
 
-      - name: Auto-merge dependabot PRs
-        uses: ahmadnassri/action-dependabot-auto-merge@v2
+    steps:
+      - name: Enable auto-merge for Dependabot PR
+        uses: peter-evans/enable-pull-request-automerge@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          merge-method: squash  
+          token: ${{ secrets.GITHUB_TOKEN }}
+          merge-method: squash  # можно merge или rebase
