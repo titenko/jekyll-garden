@@ -1,6 +1,12 @@
 # Jekyll Garden by Mative
 
+Main page:
+
 ![screenshot](https://github.com/titenko/jekyll-garden/blob/main/assets/img/Screenshot-Jekyll-Garden.png)
+
+Menu:
+
+![screenshot](https://github.com/titenko/jekyll-garden/blob/main/assets/img/Screenshot-Jekyll-Garden-Menu.png)
 
 A simple Jekyll theme that turns your Obsidian notes into a beautiful website. 
 
