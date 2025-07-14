@@ -660,10 +660,6 @@ td {
     padding: 0 var(--space-md) var(--space-md);
   }
   
-  .nav {
-    margin-bottom: var(--space-lg);
-  }
-  
   h1 {
     font-size: var(--scale-lg);
   }
