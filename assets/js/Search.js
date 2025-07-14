@@ -74,7 +74,7 @@
     }
 
     function searchInit() {
-        var dataUrl = "{{ site.baseurl }}/SearchData.json";
+        var dataUrl = "/jekyll-garden/SearchData.json";
 
         getSearchData(dataUrl)
             .then(function(responseText) {
